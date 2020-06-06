@@ -31,7 +31,7 @@ public class RoomService {
 
     public List<Room> getAll(User user) {
         //todo
-        return new ArrayList<>();
+        return new ArrayList<>(defaultRooms);
     }
 
     public Room create(User user, String title, String descr) {

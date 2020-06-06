@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#022E9C</color>
-    <color name="colorPrimaryDark">#011A5A</color>
-    <color name="colorAccent">#022E9C</color>
+    <color name="colorPrimary">#0047CC</color>
+    <color name="colorPrimaryDark">#002D81</color>
+    <color name="colorAccent">#0047CC</color>
 
     <color name="floatImage">#d1d1d1</color>
-    <color name="contextImage">#022E9C</color>
+    <color name="contextImage">#0047CC</color>
+
+
+    <color name="roomStroke">#0047CC</color>
+    <color name="roomTitleText">#d1d1d1</color>
+    <color name="roomTitleBackground" >#275FC9</color>
+
+
 </resources>
