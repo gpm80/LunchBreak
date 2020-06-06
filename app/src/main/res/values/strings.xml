@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Afterparty</string>
+    <string name="room_detail_join_button">Присоединиться</string>
+    <string name="room_detail_cancel_button">Назад</string>
+
+    <string name="todo_message">В разработке</string>
+
+    <string name="nickname_hint">Enter nickname</string>
+    <string name="about_hint">О себе</string>
 </resources>

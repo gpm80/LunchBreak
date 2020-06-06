@@ -15,6 +15,12 @@ public class Message {
     public Message() {
     }
 
+    public Message(User parent, String message, List<Attachment> attachments) {
+        this.parent = parent;
+        this.message = message;
+        this.attachments = attachments;
+    }
+
     public User getParent() {
         return parent;
     }
