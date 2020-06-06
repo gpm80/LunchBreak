@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import ru.hakaton.rutech.R;
 import ru.hakaton.rutech.model.Room;
+import ru.hakaton.rutech.service.MessageService;
 import ru.hakaton.rutech.service.RoomService;
 import ru.hakaton.rutech.service.UserService;
 
@@ -35,6 +36,7 @@ public class RoomListActivity extends AppCompatActivity {
                 Toast.makeText(RoomListActivity.this, R.string.todo_message, Toast.LENGTH_LONG).show();
             }
         });
+        System.out.println(MessageService.getDefaultListMessage() + "  Answer");
     }
 
     @Override
