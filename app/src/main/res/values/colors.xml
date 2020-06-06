@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="floatImage">#d1d1d1</color>
-    <color name="contextImage">#B0046B</color>
+<!--    <color name="floatImage">#d1d1d1</color>-->
+<!--    <color name="contextImage">#B0046B</color>-->
 
-    <color name="contextBackgroundBlack">#262C38</color>
-    <color name="contextBackgroundGrey">#303644</color>
-    <color name="contextAccent">#B0046B</color>
+<!--    <color name="contextBackgroundBlack">#262C38</color>-->
+<!--    <color name="contextBackgroundGrey">#303644</color>-->
+<!--    <color name="contextAccent">#B0046B</color>-->
+<!--    <color name="contextAccentDisable">#373C47</color>-->
+<!--    <color name="contextText">#FFFFFF</color>-->
+
+    <color name="floatImage">#FFFFFF</color>
+    <color name="contextImage">#E91F4F</color>
+    <color name="contextBackgroundBlack">#000000</color>
+    <color name="contextBackgroundGrey">#353535</color>
+    <color name="contextAccent">#E91F4F</color>
     <color name="contextAccentDisable">#373C47</color>
     <color name="contextText">#FFFFFF</color>
-
+    <color name="contextBlue">#2A78FF</color>
+    <color name="contextPrimary">#4FFF3F</color>
 
 </resources>

@@ -21,4 +21,8 @@
         <item name="android:background">@drawable/common_button</item>
         <item name="android:textColor">@color/contextAccent</item>
     </style>
+    <style name="PositiveButton" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/positive_button</item>
+        <item name="android:textColor">@color/contextPrimary</item>
+    </style>
 </resources>
