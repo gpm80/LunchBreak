@@ -17,8 +17,15 @@ public class RoomService {
 
     {
         defaultRooms = new ArrayList<>();
-        defaultRooms.add(new Room().initTest("Обо Всем для Всех", "обсуждаем повестку дня", Room.Type.DEFAULT));
-        defaultRooms.add(new Room().initTest("Пошли мы в баню", "парилка с огоньком", Room.Type.ADMIN));
+        defaultRooms.add(new Room().initTest("Обо Всём для Всех",
+                "Привет, заходи к нам!" +
+                        "\nМы обсуждаем кейсы, спикеров и организаторов." +
+                        "\nДелимся впечатлениями и своим настроением." +
+                        "\nРассказыаем о себе и о других" +
+                        "\nРазговоры обо всем и не о чем" +
+                        "\n\nЗаходите будем рады",
+                Room.Type.DEFAULT));
+        defaultRooms.add(new Room().initTest("Пошли ка мы в баню", "парилка с огоньком", Room.Type.ADMIN));
         defaultRooms.add(new Room().initTest("Знакомства", "узнаЁм друг друга", Room.Type.USER));
     }
 

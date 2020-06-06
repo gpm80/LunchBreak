@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
+import org.apache.commons.lang3.StringUtils;
 import ru.hakaton.rutech.R;
 import ru.hakaton.rutech.model.Room;
 
@@ -44,6 +45,6 @@ public class RoomHolder extends RecyclerView.ViewHolder {
     public void bind(Room room) {
         currentRoom = room;
         title.setText(room.getTitle());
-        description.setText(room.getDescription());
+        description.setText(StringUtils.abbreviate(room.getDescription(), 80));
     }
 }
