@@ -1,5 +1,7 @@
 package ru.hakaton.rutech.model;
 
+import java.util.UUID;
+
 /**
  * Комната
  */
@@ -9,6 +11,17 @@ public class Room implements Comparable<Room> {
     private String title;
     private String description;
     private Type type;
+
+    public Room() {
+    }
+
+    public Room initTest(String title, String description, Type type) {
+        uid = UUID.randomUUID().toString();
+        this.title = title;
+        this.description = description;
+        this.type = type;
+        return this;
+    }
 
     @Override
     public int compareTo(Room room) {

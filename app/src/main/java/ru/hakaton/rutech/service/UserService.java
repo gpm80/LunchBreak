@@ -3,6 +3,7 @@ package ru.hakaton.rutech.service;
 import org.apache.commons.lang3.StringUtils;
 import ru.hakaton.rutech.model.User;
 
+import java.util.Random;
 import java.util.UUID;
 
 /**
@@ -11,6 +12,7 @@ import java.util.UUID;
 public class UserService {
 
     private static UserService instance;
+    private User current;
 
     private UserService() {
     }
@@ -57,5 +59,17 @@ public class UserService {
             return false;
         }
         return true;
+    }
+
+    public User current() {
+        if (current == null) {
+            // TODO Переделать на извлечение из ПЗУ
+            current = new User();
+            current.setUid(UUID.randomUUID().toString());
+            current.setName("Тест пользак");
+            current.setType(User.Type.values()[
+                    new Random().nextInt(User.Type.values().length)]);
+        }
+        return current;
     }
 }
