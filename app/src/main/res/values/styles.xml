@@ -6,7 +6,7 @@
         <item name="windowNoTitle">true</item>
         <item name="colorPrimary">@color/contextBackgroundBlack</item>
         <item name="colorPrimaryDark">@color/contextBackgroundGrey</item>
-        <item name="colorAccent">@color/contextAccent</item>
+        <item name="colorAccent">@color/contextBlue</item>
         <item name="buttonStyle">@style/AppTheme.Button.Light</item>
         <item name="android:textColor">@color/contextText</item>
     </style>

@@ -9,30 +9,31 @@
 
     <LinearLayout
             android:orientation="horizontal"
-            android:background="@drawable/background_room_item"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-
         <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:srcCompat="@drawable/ico_table"/>
+                android:layout_gravity="bottom"
+                app:srcCompat="@drawable/ico_user"/>
         <LinearLayout
+                android:background="@drawable/background_chat_item"
+                android:layout_marginStart="4dp"
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
             <TextView
-                    android:id="@+id/room_item_title"
-                    android:background="@drawable/background_room_title"
+                    android:id="@+id/chat_item_user"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/room_title_size"/>
+                    android:textColor="@color/contextBlue"
+                    android:textSize="@dimen/chat_user_size"/>
             <TextView
-                    android:id="@+id/room_item_description"
+                    android:id="@+id/chat_item_message"
                     android:layout_marginStart="8dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/room_description_size"/>
+                    android:textSize="@dimen/chat_message_size"/>
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>
