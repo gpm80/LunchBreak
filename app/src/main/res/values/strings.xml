@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Afterparty</string>
-    <string name="title_activity_main2">Main2Activity</string>
+    <string name="room_detail_join_button">Присоединиться</string>
+    <string name="room_detail_cancel_button">Назад</string>
+
+    <string name="todo_message">В разработке</string>
 </resources>

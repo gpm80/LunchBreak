@@ -4,11 +4,11 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
-        <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/contextBackgroundBlack</item>
         <item name="colorPrimaryDark">@color/contextBackgroundGrey</item>
         <item name="colorAccent">@color/contextAccent</item>
-<!--        <item name="android:background">@color/contextBackgroundBlack</item>-->
+        <item name="buttonStyle">@style/AppTheme.Button.Light</item>
+        <item name="android:textColor">@color/contextText</item>
     </style>
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
@@ -17,4 +17,8 @@
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
 
+    <style name="AppTheme.Button.Light" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/common_button</item>
+        <item name="android:textColor">@color/contextAccent</item>
+    </style>
 </resources>

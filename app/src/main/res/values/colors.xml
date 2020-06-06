@@ -6,6 +6,7 @@
     <color name="contextBackgroundBlack">#262C38</color>
     <color name="contextBackgroundGrey">#303644</color>
     <color name="contextAccent">#B0046B</color>
+    <color name="contextAccentDisable">#373C47</color>
     <color name="contextText">#FFFFFF</color>
 
 

@@ -2,6 +2,8 @@ package ru.hakaton.rutech.ui.room;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -27,6 +29,12 @@ public class RoomListActivity extends AppCompatActivity {
         roomList.setLayoutManager(new LinearLayoutManager(this));
         roomAdapter = new RoomAdapter(this);
         roomList.setAdapter(roomAdapter);
+        findViewById(R.id.add_room_button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(RoomListActivity.this, R.string.todo_message, Toast.LENGTH_LONG).show();
+            }
+        });
     }
 
     @Override

@@ -42,6 +42,21 @@ public class RoomService {
         r.setTitle(title);
         r.setDescription(descr);
         return r;
+    }
 
+    /**
+     * Возвращает комнату по ID
+     *
+     * @param user    пользователь
+     * @param uidRoom id комнаты
+     * @return
+     */
+    public Room getRoomById(User user, String uidRoom) {
+        List<Room> allRoom = getAll(user);
+        int i = allRoom.indexOf(new Room(uidRoom));
+        if (i < 0) {
+            return null;
+        }
+        return allRoom.get(i);
     }
 }

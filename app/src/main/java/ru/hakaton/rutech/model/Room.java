@@ -1,5 +1,6 @@
 package ru.hakaton.rutech.model;
 
+import java.util.Objects;
 import java.util.UUID;
 
 /**
@@ -13,6 +14,10 @@ public class Room implements Comparable<Room> {
     private Type type;
 
     public Room() {
+    }
+
+    public Room(String uid) {
+        this.uid = uid;
     }
 
     public Room initTest(String title, String description, Type type) {
@@ -62,6 +67,19 @@ public class Room implements Comparable<Room> {
 
     public void setType(Type type) {
         this.type = type;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Room)) return false;
+        Room room = (Room) o;
+        return Objects.equals(uid, room.uid);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(uid);
     }
 
     /**
