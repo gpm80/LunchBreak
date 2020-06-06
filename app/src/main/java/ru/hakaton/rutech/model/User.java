@@ -8,6 +8,7 @@ public class User {
     private String uid;
     private String name;
     private String about;
+    private Type type;
     private Attachment avatar;
 
     /**
@@ -58,5 +59,13 @@ public class User {
 
     public void setAvatar(Attachment avatar) {
         this.avatar = avatar;
+    }
+
+    public Type getType() {
+        return type;
+    }
+
+    public void setType(Type type) {
+        this.type = type;
     }
 }
