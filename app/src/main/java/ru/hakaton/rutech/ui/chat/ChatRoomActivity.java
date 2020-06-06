@@ -2,6 +2,7 @@ package ru.hakaton.rutech.ui.chat;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -26,6 +27,7 @@ public class ChatRoomActivity extends AppCompatActivity {
     private EditText sendText;
     private Room currentRoom;
     private ChatAdapter chatAdapter;
+    private RecyclerView chatList;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -38,7 +40,7 @@ public class ChatRoomActivity extends AppCompatActivity {
             finish();
         }
         chatAdapter = new ChatAdapter(this);
-        RecyclerView chatList = findViewById(R.id.chat_list_view);
+        chatList = findViewById(R.id.chat_list_view);
         chatList.setLayoutManager(new LinearLayoutManager(this));
         chatList.setAdapter(chatAdapter);
 
@@ -51,6 +53,13 @@ public class ChatRoomActivity extends AppCompatActivity {
             }
         });
         chatAdapter.addAll(MessageService.get().getAll(currentRoom));
+        jump();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
     }
 
     private void sendMessage() {
@@ -61,7 +70,18 @@ public class ChatRoomActivity extends AppCompatActivity {
             mess.setParent(UserService.get().current());
             Message sended = MessageService.get().send(currentRoom, mess);
             chatAdapter.add(sended);
+            sendText.getText().clear();
+            jump();
         }
+    }
+
+    private void jump() {
+        try {
+            chatList.scrollToPosition(chatAdapter.getItemCount() - 1);
+        } catch (Exception e) {
+            Log.i(this.getClass().getSimpleName(), "an error jump", e);
+        }
+
     }
 
 

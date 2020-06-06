@@ -30,7 +30,6 @@
                     android:textSize="@dimen/chat_user_size"/>
             <TextView
                     android:id="@+id/chat_item_message"
-                    android:layout_marginStart="8dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="@dimen/chat_message_size"/>

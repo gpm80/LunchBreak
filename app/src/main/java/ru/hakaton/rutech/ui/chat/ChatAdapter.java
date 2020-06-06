@@ -19,7 +19,7 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatHolder> {
 
     public ChatAdapter(Context context) {
         this.context = context;
-        messages= new ArrayList<>();
+        messages = new ArrayList<>();
     }
 
     @NonNull
@@ -38,14 +38,14 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatHolder> {
     }
 
     public boolean addAll(List<Message> values) {
-        boolean b = messages.addAll(0, values);
+        boolean b = messages.addAll(values);
         notifyDataSetChanged();
         return b;
     }
 
     public void add(Message message) {
-        messages.add(0, message);
-        notifyItemInserted(0);
+        messages.add(message);
+        notifyItemInserted(messages.size() - 1);
     }
 
     @Override
