@@ -13,7 +13,6 @@ public class RoomService {
     //todo сделать синглтон как в др сервисах
 
     public List<Room> getAll(User user) {
-        //todo
     }
 
     public Room create(User user, Room room) {
