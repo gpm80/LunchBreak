@@ -7,26 +7,23 @@ import java.util.TreeMap;
 import ru.hakaton.rutech.model.Message;
 import ru.hakaton.rutech.model.Room;
 
-/**
- * Сервис сообщений чата
- */
-public class MessageService {
+public class VIPService {
 
-    private static MessageService instance;
+    private static VIPService vipKey;
     /**
      * Мапа с сообщеиями по комнатам.
      */
-    private final TreeMap<Room, List<Message>> roomMessageMap;
+    private final TreeMap<Room, List<Message>> vipRoomMessageMap;
 
-    private MessageService() {
-        roomMessageMap = new TreeMap<>();
+    private VIPService() {
+        vipRoomMessageMap = new TreeMap<>();
     }
 
-    public static MessageService get() {
-        if (instance == null) {
-            instance = new MessageService();
+    public static VIPService get() {
+        if (vipKey == null) {
+            vipKey = new VIPService();
         }
-        return instance;
+        return vipKey;
     }
 
     public Message send(Room room, Message message) {
@@ -34,27 +31,27 @@ public class MessageService {
         if(room == null) {
             List<Message> list = new ArrayList<>();
             list.add(message);
-            roomMessageMap.put(new Room(), list);
+            vipRoomMessageMap.put(new Room(), list);
         } else  {
             List<Message> list = new ArrayList<>();
             list.add(message);
-            roomMessageMap.put(room, list);
+            vipRoomMessageMap.put(room, list);
         }
 
         for(int i = 0; i < 3; i++) {
             List<Message> list = new ArrayList<>();
             list.add(new Message());
-            roomMessageMap.put(room, list);
+            vipRoomMessageMap.put(room, list);
         }
         return message;
     }
 
     public List<Message> getAll(Room room) {
         //todo вернуть все сообщения в комнате из мапы
-        roomMessageMap.get(room);
-        if(roomMessageMap.get(room) == null) {
-            return roomMessageMap.put(room, new ArrayList<Message>());
+        vipRoomMessageMap.get(room);
+        if(vipRoomMessageMap.get(room) == null) {
+            return vipRoomMessageMap.put(room, new ArrayList<Message>());
         }
-        return roomMessageMap.get(room);
+        return vipRoomMessageMap.get(room);
     }
 }
