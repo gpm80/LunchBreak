@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#0047CC</color>
-    <color name="colorPrimaryDark">#002D81</color>
-    <color name="colorAccent">#0047CC</color>
-
     <color name="floatImage">#d1d1d1</color>
-    <color name="contextImage">#0047CC</color>
+    <color name="contextImage">#B0046B</color>
 
-
-    <color name="roomStroke">#0047CC</color>
-    <color name="roomTitleText">#d1d1d1</color>
-    <color name="roomTitleBackground" >#275FC9</color>
+    <color name="contextBackgroundBlack">#262C38</color>
+    <color name="contextBackgroundGrey">#303644</color>
+    <color name="contextAccent">#B0046B</color>
+    <color name="contextText">#FFFFFF</color>
 
 
 </resources>
