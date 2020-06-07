@@ -23,7 +23,7 @@ public class RoomDetailActivity extends AppCompatActivity {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_room_detail);
+        setContentView(R.layout.activity_room_detail_table);
         Intent intent = getIntent();
         String stringExtra = intent.getStringExtra(KEY_ROOM);
         room = RoomService.get().getRoomById(UserService.get().current(), stringExtra);
