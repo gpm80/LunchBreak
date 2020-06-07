@@ -38,9 +38,8 @@ public class MessageService {
     public List<Message> getAll(Room room) {
         List<Message> messages = roomMessageMap.get(room);
         if (messages == null) {
-            List<Message> mList = TestContentInit.get().getRandomMessages(new Random().nextInt(15) + 10);
+            List<Message> mList = TestContentInit.get().getRandomMessages();
             roomMessageMap.put(room, mList);
-
         }
         return roomMessageMap.get(room);
     }

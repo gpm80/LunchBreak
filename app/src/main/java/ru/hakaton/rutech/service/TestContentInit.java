@@ -12,7 +12,7 @@ public class TestContentInit {
 
     private static TestContentInit instance;
     private List<User> userList;
-    private List<String> messagesText;
+    private List<List<String>> dialogs;
 
     public static TestContentInit get() {
         if (instance == null) {
@@ -29,35 +29,26 @@ public class TestContentInit {
         userList.add(createUser("Маша"));
         userList.add(createUser("Ваня"));
         userList.add(createUser("Некто"));
-        messagesText = Arrays.asList(
-                "Привет",
-                "Хай",
-                "Ок",
-                "Как дела? Что будем делать",
-                "А кто-нибудь видел Машу",
-                "Кто потерял телефон?",
-                "Может в бар?",
-                "Давайте споем",
-                "Вы кто здесь такие все???",
-                "Прикольно! Всем приветы!!!",
-                "Да будет свет...",
-                "Все я устал... Я пошел спать"
-        );
+        dialogs = new ArrayList<>();
+        dialogs.add(Arrays.asList("Всем привет)))","Как дела, друзья??","ОГОНЬ, хакатон отличный!!","ВСЕМ УДАЧИ!!"));
+        dialogs.add(Arrays.asList("Светит солнце, как приятно)))","Что нового, друзья???","Лучший хактон!!","Умейте прощать)"));
+        dialogs.add(Arrays.asList("Расскажим о себе, я Леша, я пока никто)","Я Саша, четкий прогрммист","Я Света, дизайнер от бога!!","А я Фёдор, я очень крутой хакатонщик:)"));
+        dialogs.add(Arrays.asList("Расскажите о конференции)))","Стоит ли на нее идти?","Конференция - ОГОНЬ!!","ВСЕМ УДАЧИ!!"));
+        dialogs.add(Arrays.asList("Всем мира, как дела?)","Мы победили хакатон...!!!","А что вы за команда?","it-lab"));
     }
-
     public List<User> getUserList() {
         return userList;
     }
 
-    public List<Message> getRandomMessages(int count) {
+    public List<Message> getRandomMessages() {
         List<Message> list = new ArrayList<>();
         Random random = new Random();
-        while (count-- > 0) {
-            list.add(createMessage(messagesText.get(random.nextInt(messagesText.size()))));
+        List<String> dialog = dialogs.get(random.nextInt(dialogs.size()));
+        for (String mess: dialog){
+            list.add(createMessage(mess));
         }
         return list;
     }
-
 
     private Message createMessage(String message) {
         Message m = new Message();
