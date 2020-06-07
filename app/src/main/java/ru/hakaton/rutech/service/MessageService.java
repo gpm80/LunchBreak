@@ -1,14 +1,12 @@
 package ru.hakaton.rutech.service;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.TreeMap;
-
-import ru.hakaton.rutech.model.Attachment;
 import ru.hakaton.rutech.model.Message;
 import ru.hakaton.rutech.model.Room;
 import ru.hakaton.rutech.model.User;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.TreeMap;
 
 /**
  * Сервис сообщений чата
@@ -18,16 +16,15 @@ public class MessageService {
     private static MessageService instance;
     private static List<Message> defaultMessage;
     private static List<List<Message>> defaultListMessage;
-
-    private final TreeMap<Room, List<Message>> roomMessageMap;
-
-    public MessageService() {
-        roomMessageMap = new TreeMap<>();
-    }
-
+    private static List<List<Message>> allDefaultListMessage;
     /**
      * Мапа с сообщеиями по комнатам.
      */
+    private final TreeMap<Room, List<Message>> roomMessageMap;
+
+    private MessageService() {
+        roomMessageMap = new TreeMap<>();
+    }
 
     public static MessageService get() {
         if (instance == null) {
@@ -36,13 +33,35 @@ public class MessageService {
         return instance;
     }
 
-    public static List<List<Message>> getDefaultListMessage() {
+    public static List<List<Message>> getAllDefaultListMessage(int id) {
+        allDefaultListMessage = new ArrayList<>();
+        switch (id) {
+            case 0:
+                allDefaultListMessage.add(defaultListMessage.get(0));
+                break;
+            case 1:
+                allDefaultListMessage.add(defaultListMessage.get(1));
+                break;
+            case 2:
+                allDefaultListMessage.add(defaultListMessage.get(2));
+                break;
+            case 3:
+                allDefaultListMessage.add(defaultListMessage.get(3));
+                break;
+            case 4:
+                allDefaultListMessage.add(defaultListMessage.get(4));
+                break;
+        }
+        return allDefaultListMessage;
+    }
+
+    public static void setDefaultListMessage() {
+        defaultListMessage = new ArrayList<>();
         defaultListMessage.add(getDefaultMessageFirst());
         defaultListMessage.add(getDefaultMessageSecond());
         defaultListMessage.add(getDefaultMessageThird());
         defaultListMessage.add(getDefaultMessageFourth());
         defaultListMessage.add(getDefaultMessageFifth());
-        return defaultListMessage;
     }
 
     public static List<Message> getDefaultMessageFirst() {
@@ -91,30 +110,15 @@ public class MessageService {
     }
 
     public Message send(Room room, Message message) {
-        //TODO добавить сообщение в мапу ключ комната значение список сообщений есть ли такая комната
-        if(room == null) {
-            List<Message> list = new ArrayList<>();
-            list.add(message);
-            roomMessageMap.put(new Room(), list);
-        } else  {
-            List<Message> list = new ArrayList<>();
-            list.add(message);
-            roomMessageMap.put(room, list);
-        }
-
-        for(int i = 0; i < 3; i++) {
-            List<Message> list = new ArrayList<>();
-            list.add(new Message());
-            roomMessageMap.put(room, list);
-        }
+        List<Message> allMessages = getAll(room);
+        allMessages.add(message);
         return message;
     }
 
     public List<Message> getAll(Room room) {
-        //todo вернуть все сообщения в комнате из мапы
-        roomMessageMap.get(room);
-        if(roomMessageMap.get(room) == null) {
-            return roomMessageMap.put(room, new ArrayList<Message>());
+        List<Message> messages = roomMessageMap.get(room);
+        if (messages == null) {
+            roomMessageMap.put(room, new ArrayList<Message>());
         }
         return roomMessageMap.get(room);
     }

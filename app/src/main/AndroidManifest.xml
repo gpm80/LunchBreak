@@ -12,13 +12,17 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".ui.room.RoomListActivity">
+        <activity android:name=".ui.activities.MainActivity" android:noHistory="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity android:name=".ui.activities.UserInfoActivity" android:noHistory="true">
+        </activity>
+        <activity android:name=".ui.room.RoomListActivity"/>
         <activity android:name=".ui.room.RoomDetailActivity"/>
+        <activity android:name=".ui.chat.ChatRoomActivity"/>
     </application>
 </manifest>

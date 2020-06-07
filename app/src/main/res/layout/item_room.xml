@@ -26,14 +26,12 @@
                     android:background="@drawable/background_room_title"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/contextText"
                     android:textSize="@dimen/room_title_size"/>
             <TextView
                     android:id="@+id/room_item_description"
                     android:layout_marginStart="8dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/contextText"
                     android:textSize="@dimen/room_description_size"/>
         </LinearLayout>
     </LinearLayout>
