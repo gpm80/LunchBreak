@@ -22,7 +22,7 @@ public class RoomHolder extends RecyclerView.ViewHolder {
     private Room currentRoom;
 
     public RoomHolder(Context context, ViewGroup group) {
-        super(LayoutInflater.from(context).inflate(R.layout.item_room, group, false));
+        super(LayoutInflater.from(context).inflate(R.layout.item_table, group, false));
         this.context = context;
         itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -31,6 +31,7 @@ public class RoomHolder extends RecyclerView.ViewHolder {
             }
         });
         title = itemView.findViewById(R.id.room_item_title);
+        title.setSelected(true);
         description = itemView.findViewById(R.id.room_item_description);
     }
 

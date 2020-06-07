@@ -17,7 +17,7 @@ public class RoomService {
 
     {
         defaultRooms = new ArrayList<>();
-        defaultRooms.add(new Room().initTest("Обо Всём для Всех",
+        /*defaultRooms.add(new Room().initTest("Обо Всём для Всех",
                 "Привет, заходи к нам!" +
                         "\nМы обсуждаем кейсы, спикеров и организаторов." +
                         "\nДелимся впечатлениями и своим настроением." +
@@ -25,8 +25,19 @@ public class RoomService {
                         "\nРазговоры обо всем и не о чем" +
                         "\n\nЗаходите будем рады",
                 Room.Type.DEFAULT));
-        defaultRooms.add(new Room().initTest("Пошли ка мы в баню", "парилка с огоньком", Room.Type.ADMIN));
-        defaultRooms.add(new Room().initTest("Знакомства", "узнаЁм друг друга", Room.Type.USER));
+        defaultRooms.add(new Room().initTest("Выступление Билла Гейтса", "парилка с огоньком", Room.Type.ADMIN));
+        defaultRooms.add(new Room().initTest("Ищем разработчиков Java", "парилка с огоньком", Room.Type.ADMIN));
+        defaultRooms.add(new Room().initTest("Пошли ка мы в караоке", "парилка с огоньком", Room.Type.ADMIN));
+        defaultRooms.add(new Room().initTest("Кто учавствует в следующей конференции", "парилка с огоньком", Room.Type.ADMIN));
+        defaultRooms.add(new Room().initTest("Знакомства", "узнаЁм друг друга", Room.Type.USER));*/
+        defaultRooms.add(new Room().initTest("Обо Всём для Всех",
+                "34/100",
+                Room.Type.DEFAULT));
+        defaultRooms.add(new Room().initTest("Выступление Билла Гейтса", "46/100", Room.Type.ADMIN));
+        defaultRooms.add(new Room().initTest("Ищем разработчиков Java", "15/100", Room.Type.ADMIN));
+        defaultRooms.add(new Room().initTest("Пошли ка мы в караоке", "99/100", Room.Type.ADMIN));
+        defaultRooms.add(new Room().initTest("Кто учавствует в следующей конференции", "54/100", Room.Type.ADMIN));
+        defaultRooms.add(new Room().initTest("Знакомства", "23/100", Room.Type.USER));
     }
 
     public static RoomService get() {

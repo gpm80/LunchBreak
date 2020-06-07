@@ -60,12 +60,16 @@ public class RoomListActivity extends AppCompatActivity {
         FloatingActionButton myFab = (FloatingActionButton) findViewById(R.id.pause_music);
         myFab.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                FloatingActionButton fab = (FloatingActionButton)v;
                 if (isMusicStarted) {
                     mediaPlayer.pause();
                     isMusicStarted = false;
+                    fab.setImageResource(android.R.drawable.ic_media_play);
+
                 } else {
                     mediaPlayer.start();
                     isMusicStarted = true;
+                    fab.setImageResource(android.R.drawable.ic_media_pause);
                 }
             }
         });

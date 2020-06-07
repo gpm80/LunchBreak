@@ -2,6 +2,9 @@
 <resources>
     <dimen name="room_title_size">18sp</dimen>
     <dimen name="room_description_size">12sp</dimen>
+        <dimen name="chat_user_size">14sp</dimen>
+    <dimen name="chat_message_size">16sp</dimen>
+
     <dimen name="room_detail_title_size">22sp</dimen>
     <dimen name="room_detail_description_size">18sp</dimen>
     <dimen name="fab_margin">16dp</dimen>

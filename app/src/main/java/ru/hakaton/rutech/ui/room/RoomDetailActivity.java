@@ -11,6 +11,7 @@ import ru.hakaton.rutech.R;
 import ru.hakaton.rutech.model.Room;
 import ru.hakaton.rutech.service.RoomService;
 import ru.hakaton.rutech.service.UserService;
+import ru.hakaton.rutech.ui.chat.ChatRoomActivity;
 
 /**
  * Детальное отображение стола
@@ -18,6 +19,7 @@ import ru.hakaton.rutech.service.UserService;
 public class RoomDetailActivity extends AppCompatActivity {
 
     public static final String KEY_ROOM = "key-room";
+    private Room room;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -25,7 +27,7 @@ public class RoomDetailActivity extends AppCompatActivity {
         setContentView(R.layout.activity_room_detail);
         Intent intent = getIntent();
         String stringExtra = intent.getStringExtra(KEY_ROOM);
-        Room room = RoomService.get().getRoomById(UserService.get().current(), stringExtra);
+        room = RoomService.get().getRoomById(UserService.get().current(), stringExtra);
         if (room == null) {
             finish();
         }
@@ -36,7 +38,7 @@ public class RoomDetailActivity extends AppCompatActivity {
         findViewById(R.id.room_detail_join_button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(RoomDetailActivity.this, R.string.todo_message, Toast.LENGTH_LONG).show();
+                joinRoom();
             }
         });
         findViewById(R.id.room_detail_cancel_button).setOnClickListener(new View.OnClickListener() {
@@ -45,5 +47,11 @@ public class RoomDetailActivity extends AppCompatActivity {
                 finish();
             }
         });
+    }
+
+    private void joinRoom() {
+        Intent intent = new Intent(this, ChatRoomActivity.class);
+        intent.putExtra(ChatRoomActivity.KEY_ROOM, room.getUid());
+        startActivity(intent);
     }
 }

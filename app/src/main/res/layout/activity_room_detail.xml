@@ -20,11 +20,13 @@
                 android:gravity="top"
                 android:layout_width="match_parent"
                 android:layout_height="120dp">
+
             <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    app:srcCompat="@drawable/ico_table"/>
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                app:srcCompat="@drawable/table_big" />
+
             <TextView
                     android:id="@+id/room_detail_title"
                     android:layout_width="wrap_content"

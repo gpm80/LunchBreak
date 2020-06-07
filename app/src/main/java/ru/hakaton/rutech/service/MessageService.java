@@ -30,30 +30,15 @@ public class MessageService {
     }
 
     public Message send(Room room, Message message) {
-        //TODO добавить сообщение в мапу ключ комната значение список сообщений есть ли такая комната
-        if(room == null) {
-            List<Message> list = new ArrayList<>();
-            list.add(message);
-            roomMessageMap.put(new Room(), list);
-        } else  {
-            List<Message> list = new ArrayList<>();
-            list.add(message);
-            roomMessageMap.put(room, list);
-        }
-
-        for(int i = 0; i < 3; i++) {
-            List<Message> list = new ArrayList<>();
-            list.add(new Message());
-            roomMessageMap.put(room, list);
-        }
+        List<Message> allMessages = getAll(room);
+        allMessages.add(message);
         return message;
     }
 
     public List<Message> getAll(Room room) {
-        //todo вернуть все сообщения в комнате из мапы
-        roomMessageMap.get(room);
-        if(roomMessageMap.get(room) == null) {
-            return roomMessageMap.put(room, new ArrayList<Message>());
+        List<Message> messages = roomMessageMap.get(room);
+        if (messages == null) {
+            roomMessageMap.put(room, new ArrayList<Message>());
         }
         return roomMessageMap.get(room);
     }
