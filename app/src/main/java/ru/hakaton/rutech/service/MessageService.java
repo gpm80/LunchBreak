@@ -3,8 +3,8 @@ package ru.hakaton.rutech.service;
 import ru.hakaton.rutech.model.Message;
 import ru.hakaton.rutech.model.Room;
 
-import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 import java.util.TreeMap;
 
 /**
@@ -38,7 +38,9 @@ public class MessageService {
     public List<Message> getAll(Room room) {
         List<Message> messages = roomMessageMap.get(room);
         if (messages == null) {
-            roomMessageMap.put(room, new ArrayList<Message>());
+            List<Message> mList = TestContentInit.get().getRandomMessages(new Random().nextInt(15) + 10);
+            roomMessageMap.put(room, mList);
+
         }
         return roomMessageMap.get(room);
     }
