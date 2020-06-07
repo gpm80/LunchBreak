@@ -1,11 +1,11 @@
 package ru.hakaton.rutech.service;
 
+import ru.hakaton.rutech.model.Message;
+import ru.hakaton.rutech.model.Room;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.TreeMap;
-
-import ru.hakaton.rutech.model.Message;
-import ru.hakaton.rutech.model.Room;
 
 /**
  * Сервис сообщений чата
@@ -42,5 +42,4 @@ public class MessageService {
         }
         return roomMessageMap.get(room);
     }
-
 }

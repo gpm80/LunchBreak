@@ -8,7 +8,7 @@
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/contextBackgroundBlack</item>
         <item name="colorPrimaryDark">@color/contextBackgroundGrey</item>
-         <item name="colorAccent">@color/contextAccent</item>
+         <item name="colorAccent">@color/contextBlue</item>
         <item name="android:textColorHint">@color/floatImage</item>
             <item name="buttonStyle">@style/AppTheme.Button.Light</item>
         <item name="android:textColor">@color/contextText</item>
@@ -43,7 +43,6 @@
     </style>
     <style name="PositiveButton" parent="Widget.AppCompat.Button">
         <item name="android:background">@drawable/positive_button</item>
-
-<item name="android:textColor">@color/contextPrimary</item>
+        <item name="android:textColor">@color/contextPrimary</item>
     </style>
 </resources>
