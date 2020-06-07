@@ -66,7 +66,7 @@ public class UserService {
             // TODO Переделать на извлечение из ПЗУ
             current = new User();
             current.setUid(UUID.randomUUID().toString());
-            current.setName("Тест пользак");
+            current.setName("Ты");
             current.setType(User.Type.values()[
                     new Random().nextInt(User.Type.values().length)]);
         }
