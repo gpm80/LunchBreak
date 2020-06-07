@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_graph"
+    app:startDestination="@id/userInfoActivity">
+    <activity
+        android:id="@+id/userInfoActivity"
+        android:name="ru.hakaton.rutech.ui.activities.UserInfoActivity"
+        android:label="UserInfoActivity" />
+</navigation>
