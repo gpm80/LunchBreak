@@ -8,7 +8,7 @@
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/contextBackgroundBlack</item>
         <item name="colorPrimaryDark">@color/contextBackgroundGrey</item>
-         <item name="colorAccent">@color/contextAccent</item>
+         <item name="colorAccent">@color/contextBlue</item>
         <item name="android:textColorHint">@color/floatImage</item>
             <item name="buttonStyle">@style/AppTheme.Button.Light</item>
         <item name="android:textColor">@color/contextText</item>
@@ -20,28 +20,22 @@
         <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
         <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
 
-    <style name="AppTheme.Button.Light" parent="Widget.AppCompat.Button">
-        <item name="android:background">@drawable/common_button</item>
-        <item name="android:textColor">@color/contextAccent</item>
-    </style>
-    <style name="PositiveButton" parent="Widget.AppCompat.Button">
-        <item name="android:background">@drawable/positive_button</item>
+<!--    <style name="AppTheme.Button.Light" parent="Widget.AppCompat.Button">-->
+<!--        <item name="android:background">@drawable/common_button</item>-->
+<!--        <item name="android:textColor">@color/contextAccent</item>-->
+<!--    </style>-->
+<!--    <style name="PositiveButton" parent="Widget.AppCompat.Button">-->
+<!--        <item name="android:background">@drawable/positive_button</item>-->
 
-<item name="android:textColor">@color/contextPrimary</item>
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="colorPrimary">@color/contextBackgroundBlack</item>
-        <item name="colorPrimaryDark">@color/contextBackgroundGrey</item>
-        <item name="colorAccent">@color/contextBlue</item>
-        <item name="buttonStyle">@style/AppTheme.Button.Light</item>
-        <item name="android:textColor">@color/contextText</item>
-    </style>
-    <style name="AppTheme.NoActionBar">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-    </style>
-    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
-    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+<!--<item name="android:textColor">@color/contextPrimary</item>-->
+<!--        <item name="windowActionBar">false</item>-->
+<!--        <item name="windowNoTitle">true</item>-->
+<!--        <item name="colorPrimary">@color/contextBackgroundBlack</item>-->
+<!--        <item name="colorPrimaryDark">@color/contextBackgroundGrey</item>-->
+<!--        <item name="colorAccent">@color/contextBlue</item>-->
+<!--        <item name="buttonStyle">@style/AppTheme.Button.Light</item>-->
+<!--        <item name="android:textColor">@color/contextText</item>-->
+<!--    </style>-->
 
     <style name="AppTheme.Button.Light" parent="Widget.AppCompat.Button">
         <item name="android:background">@drawable/common_button</item>
